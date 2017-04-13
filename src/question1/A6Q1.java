@@ -32,9 +32,11 @@ public class A6Q1 {
         //ask the user to input the marks
         System.out.println("Please enter the marks.");
         for (int i = 0; i < students; i++) {
-            double mark = input.nextDouble();
+            marks[i] = input.nextDouble();
+        }
             //add the marks together to find the total
-            total = total + mark;
+        for (int i = 0; i < students; i++) {
+            total = total + marks[i];
         }
 
         //find the average using the total and the number of students then output the average

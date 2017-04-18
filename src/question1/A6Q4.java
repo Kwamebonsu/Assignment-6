@@ -25,11 +25,11 @@ public class A6Q4 {
         //Scan in 10 marks
         System.out.println("Please enter 10 marks.");
 
-        for (int i = 0; i < mark.length; i++) {
+        for (int i = 0; i < 10; i++) {
             mark[i] = input.nextDouble();
         }
         //compare each mark
-        for (int i = 0; i < mark.length; i++) {
+        for (int i = 0; i < 10; i++) {
             if (mark[i] < mark[i + 1]) {
             }
         }

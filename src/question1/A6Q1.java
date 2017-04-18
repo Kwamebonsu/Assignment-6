@@ -34,7 +34,7 @@ public class A6Q1 {
         for (int i = 0; i < students; i++) {
             marks[i] = input.nextDouble();
         }
-            //add the marks together to find the total
+        //add the marks together to find the total
         for (int i = 0; i < students; i++) {
             total = total + marks[i];
         }

@@ -30,7 +30,7 @@ public class A6Q4 {
         }
         //compare each mark
         for (int i = 0; i < mark.length; i++) {
-            if (mark[i] < mark[i]) {
+            if (mark[i] < mark[i + 1]) {
             }
         }
     }

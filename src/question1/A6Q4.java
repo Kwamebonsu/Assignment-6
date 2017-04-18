@@ -28,16 +28,9 @@ public class A6Q4 {
         for (int i = 0; i < mark.length; i++) {
             mark[i] = input.nextDouble();
         }
-
+        //compare each mark
         for (int i = 0; i < mark.length; i++) {
-            if (mark[i] < mark[i + 1] && mark[i] < mark[i - 1]) {
-                System.out.println(mark[i]);
-            }
-            if (mark[i + 1] < mark[i] && mark[i + 1] < mark[i - 1]) {
-                System.out.println(mark[i + 1]);
-            }
-            if (mark[i - 1] < mark[i + 1] && mark[i - 1] < mark[i]) {
-                System.out.println(mark[i - 1]);
+            if (mark[i] < mark[i]) {
             }
         }
     }

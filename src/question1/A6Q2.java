@@ -4,6 +4,7 @@
  */
 package question1;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -19,6 +20,7 @@ public class A6Q2 {
         // Create a scanner called input
         Scanner input = new Scanner(System.in);
 
+        
         //ask the user how long the list should be
         System.out.println("How many heights are being recorded?");
         int number = input.nextInt();
@@ -38,15 +40,18 @@ public class A6Q2 {
             //add each height to the total
             total = total + heights[i];
         }
+        // Set the decimal format
+        DecimalFormat two = new DecimalFormat("##.##");
+        
         //calculate the average
         double avg = total / number;
-        System.out.println("The average height is " + avg + "cm.");
+        System.out.println("The average height is " + two.format(avg) + "cm.");
 
         //output the above average heights
         System.out.println("The above average heights are: ");
         for (int i = 0; i < number; i++) {
             if (heights[i] > avg) {
-                System.out.println(heights[i]);
+                System.out.println(heights[i] + " cm");
             }
         }
     }

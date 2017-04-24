@@ -46,16 +46,22 @@ public class A6Q5 {
                 }
             }
         }
+        //output the marks in order from lowest to highest
+        for (int i = 0; i < mark.length; i++) {
+            System.out.println(mark[i]);
+        }
+
+        System.out.println("");
+
         // Check whether amount of numbers is even or odd
         if (number % 2 == 0) {
-            // If the number is even find the 2 middle positions of the array
+            // If the number is even find the average of the 2 middle positions of the array then output it
             int num1 = (number) / 2;
             int num2 = (number - 1) / 2;
-            // Find the average of those 2 positions then output it
             double median = (mark[num1] + mark[num2]) / 2;
             System.out.println("The median is " + median + ".");
-        } else if (number % 2 == 1) {
-            // If the number is odd, find the middle position then output the value in that position
+        } // If the number is odd, find the middle position then output the value in that position
+        else if (number % 2 == 1) {
             int middle = (number - 1) / 2;
             System.out.println("The median is " + mark[middle] + ".");
         }

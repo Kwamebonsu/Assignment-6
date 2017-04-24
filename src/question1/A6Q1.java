@@ -4,6 +4,7 @@
  */
 package question1;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -38,8 +39,12 @@ public class A6Q1 {
         for (int i = 0; i < students; i++) {
             total = total + marks[i];
         }
+        //Create a variable for the average
+        double avg = total / students;
 
+        //set the decimal format to 2 decimal places
+        DecimalFormat f = new DecimalFormat("##.##");
         //find the average using the total and the number of students then output the average
-        System.out.println("The average is " + total / students + "%!");
+        System.out.println("The average is " + f.format(avg) + "%!");
     }
 }

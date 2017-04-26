@@ -8,7 +8,7 @@ package question1;
  *
  * @author bonsk5852
  */
-public class A6Q7 {
+public class PrimeNumbers {
 
     /**
      * @param args the command line arguments
@@ -29,35 +29,28 @@ public class A6Q7 {
             if (numbers[i] > p && numbers[i] % p == 0) {
                 numbers[i] = -1;
             }
-            //System.out.println(numbers[i]);
         }
         while (p <= numbers.length) {
             for (int i = 0; i < numbers.length; i++) {
                 if (p + i != -1 && p + i > 2) {
                     p = p + i;
-                    break;
                 }
-            }
-            for (int k = 0; k < numbers.length; k++) {
-                if (numbers[k] > p && numbers[k] % p == 0) {
-                    numbers[k] = -1;
-                }
-//                System.out.println(numbers[k]);
-            }
-//        for (int i = 0; i < numbers.length; i++) {
-//            if (numbers[i] > p && numbers[i] % p == 0) {
-//                numbers[i] = -1;
-//            }
-//            System.out.println(numbers[i]);
-//        }
 
+                for (int k = 0; k < numbers.length; k++) {
+                    if (numbers[k] > p && numbers[k] % p == 0) {
+                        numbers[k] = -1;
+                    }
+                }
+
+
+            }
             if (p <= numbers.length) {
                 break;
             }
         }
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] != -1) {
-                System.out.println(numbers[i]);
+        for (int k = 0; k < numbers.length; k++) {
+            if (numbers[k] != -1) {
+                System.out.println(numbers[k]);
             }
         }
 

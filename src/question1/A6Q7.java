@@ -16,50 +16,33 @@ public class A6Q7 {
     public static void main(String[] args) {
         // Create an array of all the integers between 2 and 1000
         //int[] numbers = new int[999];
-        int[] numbers = new int[999];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = i + 2;
+        int[] numbers = new int[1001];
+        for (int i = 2; i < numbers.length; i++) {
+            numbers[i] = i;
         }
 
         // Create a variable for prime numbers
         int p = 2;
 
-        // Mark all the multiples of 2 as -1
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] > p && numbers[i] % p == 0) {
-                numbers[i] = -1;
-            }
-            //System.out.println(numbers[i]);
-        }
-        while (p <= 100) {
+        // Mark al the numbers divisible by variable p as -1, then add 1 to p and repeat
+        while (p < 1000) {
             for (int i = 0; i < numbers.length; i++) {
-                if (p + i != -1 && p + i > 2) {
-                    p = p + i;
-                    for (int k = 0; k < numbers.length; k++) {
-                        if (numbers[k] > p && numbers[k] % p == 0) {
-                            numbers[k] = -1;
-                        }
-//                System.out.println(numbers[k]);
-                    }
+                if (numbers[i] % p == 0 && numbers[i] != p) {
+                    numbers[i] = -1;
                 }
             }
-
-//        for (int i = 0; i < numbers.length; i++) {
-//            if (numbers[i] > p && numbers[i] % p == 0) {
-//                numbers[i] = -1;
-//            }
-//            System.out.println(numbers[i]);
-//        }
-
-            if (p <= 100) {
-                break;
+            p++;
+            // If p is already marked, go to the next number
+            while (p == -1) {
+                p++;
             }
         }
+        // Output the prime numbers
         for (int i = 0; i < numbers.length; i++) {
+
             if (numbers[i] != -1) {
                 System.out.println(numbers[i]);
             }
         }
-
     }
 }
